@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="settings.css">
-    <title>Chrome Addon v3: Settings</title>
+    <title>The Censorer: Settings</title>
 </head>
 <body>
-    This is the <span class="special-text">settings</span> page for the addon.
+    <!-- a textarea for the user to enter their bad words, and a button to submit the bad words -->
+    <form action="settings.php" method="post">
+        <textarea name="badwords" rows="10" cols="50" placeholder="Enter your bad words here"></textarea>
+        <input type="submit" value="Submit">
 </body>
 </html>
