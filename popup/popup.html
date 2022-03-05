@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="popup.css">
-    <title>Chrome Addon v3: popup</title>
+    <title>Censorer: popup</title>
 </head>
 <body>
-    This is the <span class="special-text">HTML</span> body of the addon.
-</body>
+    <!-- button to activate or deactivate censorer -->
+    <button id="censorer-button">Activate Censorer</button>
+    <!-- store status of censorer -->
+    <input type="hidden" id="censorer-status" value="off">
+    <!-- if button is pressed, turn on or off censorer -->
+    <script>
+        document.getElementById("censorer-button").addEventListener("click", function() {
+            var censorerStatus = document.getElementById("censorer-status").value;
+            if (censorerStatus == "off") {
+                document.getElementById("censorer-status").value = "on";
+                document.getElementById("censorer-button").innerHTML = "Deactivate Censorer";
+            } else {
+                document.getElementById("censorer-status").value = "off";
+                document.getElementById("censorer-button").innerHTML = "Activate Censorer";
+            }
+        });
 </html>
